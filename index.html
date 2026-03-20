@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iscas do Afonso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo Base - Focado no visual do App enviado */
+        :root {
+            --bg-color: #050505;
+            --card-bg: #141414;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --btn-green: #25D366;
+            --btn-green-hover: #1EBE5D;
+            --btn-dark: #222222;
+            --btn-dark-hover: #333333;
+            --accent-color: #D500F9; /* Roxo/Rosa da barrinha do print */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 4rem;
+        }
+
+        /* Cabeçalho Simples */
+        header {
+            padding: 1.5rem 2rem;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #1f1f1f;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Títulos das Seções estilo App */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .section-bar {
+            width: 4px;
+            height: 24px;
+            background-color: var(--accent-color);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Grid de Produtos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+            gap: 1.5rem;
+            justify-content: start;
+        }
+
+        /* Cartões estilo App */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #1f1f1f;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid #1f1f1f;
+        }
+
+        .card-content {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .aviso {
+            display: block;
+            margin-top: 8px;
+            color: #ff4444;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Botões Empilhados */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-green {
+            background-color: var(--btn-green);
+            color: #000000;
+        }
+
+        .btn-green:hover {
+            background-color: var(--btn-green-hover);
+        }
+
+        .btn-dark {
+            background-color: var(--btn-dark);
+            color: var(--text-main);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--btn-dark-hover);
+        }
+
+        /* Informações Locais */
+        .info-local {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            border: 1px solid #1f1f1f;
+        }
+
+        .info-local p {
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .info-local strong {
+            color: var(--text-main);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr; /* 1 coluna no celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">AF - pesca</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-header">
+            <div class="section-bar"></div>
+            <h2 class="section-title">PRODUTOS DISPONÍVEIS</h2>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1625944227300-848e026217eb?auto=format&fit=crop&q=80&w=400&h=250" alt="Camarão Fresco" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Camarão Fresco (Isca)</h3>
+                    <p class="card-desc">
+                        Camarão fresco para usar como isca na sua pescaria.
+                        <span class="aviso">Apenas por encomenda (pedir com 3 dias de antecedência).</span>
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://wa.me/557591837196?text=Olá Afonso, quero encomendar Camarão Fresco para isca. Estou ciente dos 3 dias de antecedência." class="btn btn-green" target="_blank">Encomendar</a>
+                        <a href="#info" class="btn btn-dark">Informações</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511854098642-1811568291f0?auto=format&fit=crop&q=80&w=400&h=250" alt="Piau e Tilápia" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Piau e Tilápia</h3>
+                    <p class="card-desc">Peixes frescos e limpos. Vendemos o que pescamos no dia, então confirme com a gente o que tem disponível.</p>
+                    <div class="btn-group">
+                        <a href="https://wa.me/557591837196?text=Olá Afonso, queria saber se tem Piau ou Tilápia hoje." class="btn btn-green" target="_blank">Comprar</a>
+                        <a href="#info" class="btn btn-dark">Informações</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" id="info">
+            <div class="section-bar"></div>
+            <h2 class="section-title">LOCAL & CONTATO</h2>
+        </div>
+
+        <div class="info-local">
+            <p><strong>Negócio Local:</strong> Venda direta de peixes e iscas.</p>
+            <p><strong>Localização:</strong> Povoado Morcego</p>
+            <p><strong>WhatsApp / Telefone:</strong> +55 75 9183-7196</p>
+            <br>
+            <a href="https://wa.me/557591837196" class="btn btn-green" style="display: inline-block; width: auto; padding: 0.6rem 2rem;" target="_blank">Chamar no WhatsApp</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
